@@ -183,6 +183,8 @@ class Station:
 		self.is_in_active_mode = False
 
 	def _add_probe(self, packet):
+		Printer.write('ESSID:!!!!')
+		print 'ESSID'
 		Printer.write(packet[Dot11].essid())
 		essid = packet[Dot11].essid()
 		if essid in self.probes:
