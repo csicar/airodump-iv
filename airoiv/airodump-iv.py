@@ -191,6 +191,7 @@ class Station:
 		Printer.write(packet[Dot11].essid())
 		Printer.write(packet[Dot11].essid())
 		essid = packet[Dot11].essid()
+		Printer.write(str(essid))
 		if essid in self.probes:
 			self.probes[essid] += 1
 		else:
