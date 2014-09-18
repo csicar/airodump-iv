@@ -184,7 +184,11 @@ class Station:
 
 	def _add_probe(self, packet):
 		Printer.write('ESSID:!!!!')
+		Printer.write('ESSID:!!!!')
+		Printer.write('ESSID:!!!!')
 		print 'ESSID'
+		Printer.write(packet[Dot11].essid())
+		Printer.write(packet[Dot11].essid())
 		Printer.write(packet[Dot11].essid())
 		essid = packet[Dot11].essid()
 		if essid in self.probes:
