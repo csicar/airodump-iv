@@ -22,6 +22,7 @@ from scapy.layers.dot11 import Dot11ProbeReq
 from scapy.layers.dot11 import Dot11ProbeResp
 from scapy.layers.dot11 import RadioTap
 import scapy_ex
+import json
 
 from printer import Printer
 from we import WirelessExtension
@@ -191,6 +192,7 @@ class Station:
 		Printer.write(packet[Dot11].essid())
 		Printer.write(packet[Dot11].essid())
 		essid = packet[Dot11].essid()
+		Printer.write('::::::--'+json.dumps(packet)+'//:::::')
 		Printer.write('<<<<<<<<<'+str(essid)+'>>>>>>')
 		if essid in self.probes:
 			self.probes[essid] += 1
